@@ -39,6 +39,7 @@ module Database.SQL.Types
        , Table(..)
        , Column(..)
        , SQLTable
+       , SQLColumn
 
        , SQLType(..)
        , IntType(..)
@@ -117,6 +118,8 @@ data Column a
           , colType    :: a
           , colClauses :: [Clause]
           }
+
+type SQLColumn = Column SQLType
 
 -- | MySQL slanted, but also SQLite friendly if you don't get
 -- too fancy..
